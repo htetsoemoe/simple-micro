@@ -1,0 +1,22 @@
+{
+  "name": "simple-micro",
+  "version": "1.0.0",
+  "description": "Build a simple microservices project (MERN Stack)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon api-gateway/server.js",
+    "auth": "nodemon services/auth-service/server.js",
+    "product": "nodemon services/product-service/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.10.0",
+    "nodemon": "^3.1.9"
+  }
+}
