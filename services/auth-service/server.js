@@ -1,15 +1,14 @@
 require('dotenv').config()
 const express = require('express')
 const connectDB = require('../auth-service/db/connectDB')
+const authServiceRouter = require('./routers/authService.route')
 
 const app = express()
 const PORT = process.env.AUTH_PORT || 3001
 
 app.use(express.json())
 
-app.get('/auth', (req, res) => {
-    res.status(200).json({ message: 'Hello from auth-service' })
-})
+app.use('/auth', authServiceRouter)
 
 app.listen(PORT, () => {
     connectDB()
